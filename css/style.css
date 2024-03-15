@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    width: 20%;
+    background: #fff;
+    display: flex;
+    border-radius: 2rem;
+    opacity: 0.7;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header #time-date {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.header #time-date .time {
+    margin-right: auto;
+    padding-left: 5rem;
+}
+
+.header #time-date .date {
+    margin-left: auto;
+    margin-right: 5rem;
+}
+
+body{
+    min-height: 100vh;
+}
+
+html, body {
+    font-family: sans-serif;
+    background: url("../images/pexels-tomas-anunziata-3876407.jpg");
+    overflow: hidden;
+}
+
+.dashboard-container{
+    min-height: 100vh;
+    width: 100vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container .heading{
+    color: #fff;
+    margin: 10rem 0 2rem;
+}
+
+.dashboard-container .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-container .row .card {
+    position: relative; 
+    height: 25rem;
+    width: 20rem;
+    background: #d6d5d5fb;
+    text-align: center;
+    margin: 0 2rem;
+    overflow: hidden;
+    opacity: 0.8;
+    border-radius: 2rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.dashboard-container .row .card h3 {
+    position: absolute; 
+    top: 1rem; 
+    left: 50%; 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    transform: translateX(-50%); 
+    margin-bottom: 1rem;
+}
+
+.dashboard-container .row .card .links{
+    margin-top: 10px;
+}
+
+.dashboard-container .row .card .links .quick-links{
+    list-style-type: none;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.dashboard-container .row .card .links .quick-links li{
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 3rem; 
+    width: 16rem;
+    background-color: #fff; 
+    padding: 0.7rem; 
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-container .row .card .links .quick-links li i{
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dashboard-container .row .card .links .quick-links li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #333;
+    cursor: pointer;
+}
+.dashboard-container .row .card .links .quick-links li:hover{
+    opacity: 0.7;
+}
+
+.dashboard-container .row .card .links .quick-links li .remove-link{
+    margin-left: auto;
+}
+
+.dashboard-container .row .card .links .add-link .add-link-btn{
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 3rem; 
+    width: 10rem;
+    background-color: #15151534; 
+    padding: 0.5rem; 
+    display: inline-block;
+}
+
+.dashboard-container .row .card .links .add-link .add-link-btn i{
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.dashboard-container .card .weather {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.dashboard-container .card .weather .weather-current,
+.dashboard-container .card .weather .weather-tomorrow,
+.dashboard-container .card .weather .weather-dayafter {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    margin-bottom: 10px;
+    padding: 0.7rem;
+    width: 16rem;
+    display: flex;
+}
+
+.card .weather .weather-details {
+    display: flex;
+    align-items: center;
+}
+
+.card .weather .weather-icon {
+    font-size: 2em;
+    margin-right: 1rem;
+    justify-content: left;
+}
+
+.weather-info {
+    flex-grow: 1;
+}
+
+.card .weather .weather-current, 
+.card .weather .weather-tomorrow,
+.card .weather .weather-dayafter{
+    text-align: right;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card .weather .weather-current p,
+.card .weather .weather-tomorrow p,
+.card .weather .weather-dayafter p{
+    padding-top: 0.1rem;
+    font-weight: 800;
+}
+
+.card .weather .weather-current h4,
+.card .weather .weather-tomorrow h4,
+.card .weather .weather-dayafter h4{
+    padding-top: 0.1rem;
+    font-weight: 800;
+}
+
+.card .notes{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+}
+
+.card .noteArea{
+    width: 80%;
+    height: 75%;
+    resize: both;
+    font-size: 1rem;
+}
+
+.footer-button {
+    width: 12%;
+    background: #fff;
+    display: flex;
+    border-radius: 2rem;
+    opacity: 0.7;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-button i {
+    margin-right: 0.5rem; /* Adjust as needed */
+}
+
+.footer-button button {
+    border: none;
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="./JS/script.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <h2 id="time-date">
+            <span class="time"></span>  <span class="date"></span>
+        </h2>
+    </header>
+    <div class="dashboard-container">
+        <h1 class="heading">Simon Ståhl Dashboard</h1>
+        <div class="row">
+            <div class="card">
+                <h3>Snabblänkar</h3>
+                <div class="links">
+                    <ul class = quick-links>
+                        <li class="google"><a href="https://www.google.com" target="_blank">Google</a><i class="fas fa-minus-circle remove-link"></i></li>
+                        <li class="notion"><a href="https://qlok.notion.site/Webbutveckling-frontend-9e339689a8c941d8ac5c79e8786c712d" target="_blank">Notion</a><i class="fas fa-minus-circle remove-link"></i></li>
+                        <li class="omni"><a href="https://omni.se" target="_blank">Omni</a><i class="fas fa-minus-circle remove-link"></i></li>
+                        <li class="github"><a href="https://github.com" target="_blank">Github</a><i class="fas fa-minus-circle remove-link"></i></li>
+                    </ul>
+                    <div class="add-link">
+                        <span class="add-link-btn"><i class="fas fa-plus-circle"></i>Lägg till länk</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Dagens väder</h3>
+                <div class="weather">
+                    <div class="weather-current">
+                        <i id="weather-icon-current" class="weather-icon"></i>
+                        <h4>Idag</h4>
+                        <p id="weather-current"></p>
+                        <p id="temperature-current"></p>
+                    </div>
+                    <div class="weather-tomorrow">
+                        <i class="weather-icon-tomorrow weather-icon"></i>
+                        <h4>Imorgon</h4>
+                        <p class="weather-tomorrow-text"></p>
+                        <p class="temperature-tomorrow"></p>
+
+                    </div>
+                    <div class="weather-dayafter">
+                        <i class="weather-icon-dayafter weather-icon"></i>
+                        <h4 class="weekday-dayafter"></h4>
+                        <p class="weather-dayafter-text"></p>
+                        <p class="temperature-dayafter"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>[...]</h3>
+                <div class="links">
+
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Anteckningar</h3>
+                    <textarea class="noteArea" id="noteArea" rows="20"></textarea>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="footer-button">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <button id="unsplashedImage">Random Background</button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
