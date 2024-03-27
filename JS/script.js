@@ -190,6 +190,45 @@ document.addEventListener('DOMContentLoaded', function() {
     setBackgroundImage();
 
 
+    function fetchNewsPrograms() {
+        const apiUrl = 'http://api.sr.se/api/v2/news/episodes?format=json&programid=128';
+    
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const episodes = data.episodes;
+    
+               
+                episodes.forEach(episode => {
+                    const programName = episode.program.name;
+    
+                    
+                    if (programName === 'P4 Halland') {
+                        const title = episode.title;
+                        const description = episode.description;
+                        const programUrl = episode.url;
+    
+                        const episodeElement = document.createElement('div');
+                        episodeElement.innerHTML = `
+                            <h4>${title}</h4>
+                            <p>${description}</p>
+                            <a href="${programUrl}" target="_blank">Läs mer</a>
+                        `;
+                        document.querySelector('.SRnews').appendChild(episodeElement);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching news programs:', error);
+            });
+    }
+    
+    fetchNewsPrograms();
+    document.addEventListener('DOMContentLoaded', fetchNewsPrograms);
+
 
 
 });
+
+
+
