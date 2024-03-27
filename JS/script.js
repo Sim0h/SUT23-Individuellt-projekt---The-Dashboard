@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     function fetchNewsPrograms() {
-        const apiUrl = 'http://api.sr.se/api/v2/news/episodes?format=json&programid=128';
+        const apiUrl = 'https://api.sr.se/api/v2/news/episodes?format=json&programid=128';
     
         fetch(apiUrl)
             .then(response => response.json())
@@ -212,8 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         episodeElement.innerHTML = `
                             <h4>${title}</h4>
                             <p>${description}</p>
-                            <a href="${programUrl}" target="_blank">Läs mer</a>
-                        `;
+                            <a href="${programUrl}" target="_blank">Läs mer</a>`;
                         document.querySelector('.SRnews').appendChild(episodeElement);
                     }
                 });
